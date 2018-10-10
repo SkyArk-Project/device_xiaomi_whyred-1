@@ -18,6 +18,11 @@
 PRODUCT_PACKAGES += \
     audiod \
     audio.a2dp.default \
+    android.hardware.audio@2.0-service \
+    android.hardware.audio@4.0-impl \
+    android.hardware.audio.effect@4.0-impl \
+    android.hardware.broadcastradio@1.0-impl \
+    android.hardware.soundtrigger@2.1-impl
     audio.primary.sdm660 \
     audio.r_submix.default \
     audio.usb.default \
@@ -120,6 +125,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     chargeonlymode
 
+# Health
+ PRODUCT_PACKAGES += \
+     android.hardware.health@2.0-service
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
@@ -184,7 +193,11 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     vendor/aosp/overlay/CarrierConfig
 
-# OMX
+# XiaomiParts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
+#FM
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libextmedia_jni \
